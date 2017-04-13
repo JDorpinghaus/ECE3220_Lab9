@@ -82,7 +82,7 @@ int main(int argc, char **argv) {
 	*PBDR &= ~0xE0;	// OFF: write a 0 to port B5,6,7. Mask all other bits.
 	usleep(500000);
 
-	morseCodeMessage m1("this is my morse message");
+	morseCodeMessage m1;
 	m1.print();
 	m1.morseCodeToLights(PBDR, PBDDR);
 
